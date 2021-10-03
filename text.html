@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <title>Smart-Math</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body style="width: 1920px">
+    <!-- header -->
+    <div class="header2" id="header2">
+        <a href="index.html"><img class="logo"
+            src="https://res.cloudinary.com/dwhlxdb6r/image/upload/v1633184694/SMART-MATH_free-file_ljpxy9.png" /></a>
+        <ul class="nav-bar">
+            <li><a class="hometag" href="index.html">Home</a></li>
+            <li>
+                <a class="testtag" id="current" href="text.html">Test Yourself</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Topic -->
+    <div class="topic-container">
+        <span class="topic">✎ Try the following questions ✐</span>
+    </div>
+
+    <!-- quesiton box 1-->
+    <div class="qb01">
+        <p id="q1"></p>
+        <span class="symbol">x</span>
+        <p id="q2"></p>
+        <span class="symbol2">=</span>
+        <textarea class="random-fill2" id="uans"></textarea>
+    </div>
+
+    <!-- quesiton box 2-->
+    <div class="qb02">
+        <p id="q1-1"></p>
+        <span class="symbol">x</span>
+        <p id="q2-1"></p>
+        <span class="symbol2">=</span>
+        <textarea class="random-fill2" id="uans-1"></textarea>
+    </div>
+
+    <!-- quesiton box 3-->
+    <div class="qb03">
+        <p id="q1-2"></p>
+        <span class="symbol">x</span>
+        <p id="q2-2"></p>
+        <span class="symbol2">=</span>
+        <textarea class="random-fill2" id="uans-2"></textarea>
+    </div>
+
+    <div class="sbtn-container">
+        <button class="r-btn2" onclick="verifyq();">
+            <a href="#showHide">Submit Your Answer</a>
+        </button>
+    </div>
+
+    <!-- backarrow -->
+    <div class="stage">
+        <div class="arrow bounce-3">
+            <a href="#header2"><img class="image"
+                    src="https://res.cloudinary.com/dwhlxdb6r/image/upload/v1633203359/iconmonstr-angel-down-circle-thin-240_qmib4h_e8hgho.png" /></a>
+        </div>
+    </div>
+
+    <div id="showHide">
+        <center>
+            <table class="showTable">
+                <tr class="showTable-col01">
+                    <td>Question</td>
+                    <td>Answer</td>
+                    <td>Your Answer</td>
+                    <td>Status</td>
+                </tr>
+                <tr class="showTable-col02">
+                    <td>1</td>
+                    <td>The Answer is <sSpan id="ans"></sSpan>
+                    </td>
+                    <td><span id="firstans"></span></td>
+                    <td><span id="ans-status"></span></td>
+                </tr>
+                <tr class="showTable-col03">
+                    <td>2</td>
+                    <td>The Answer is <span id="ans-1"></span></td>
+                    <td><span id="secans"></span></td>
+                    <td><span id="ans-status-1"></span></td>
+                </tr>
+                <tr class="showTable-col04">
+                    <td>3</td>
+                    <td>The Answer is <span id="ans-2"></span></td>
+                    <td><span id="thirdans"></span></td>
+                    <td><span id="ans-status-2"></span></td>
+                </tr>
+                <tr class="showTable-col03">
+                    <td colspan="2">Total Marks</td>
+                    <td colspan="2"><span id="marks"></span></td>
+                </tr>
+            </table>
+
+            <div class="sbtn-container"></div>
+            <button class="r-btn3" onclick="verifyq();">
+                <a href="text.html">Reset Questions</a>
+            </button>
+        </center>
+    </div>
+
+    <span id="ptotal"></span>
+
+    <!-- footer -->
+    <div class="footer">
+        <span>© 2021 SMART - MATH</span>
+    </div>
+
+    <!-- random question logic variable -->
+    <script>
+        // q1 variable
+        document.getElementById("q1").innerHTML = Math.floor(Math.random() * 10);
+        document.getElementById("q2").innerHTML = Math.floor(Math.random() * 10);
+        document.getElementById("ans").innerHTML =
+            document.getElementById("q1").innerHTML *
+            document.getElementById("q2").innerHTML;
+
+        //q2 variable
+        document.getElementById("q1-1").innerHTML = Math.floor(
+            Math.random() * 10
+        );
+        document.getElementById("q2-1").innerHTML = Math.floor(
+            Math.random() * 10
+        );
+        document.getElementById("ans-1").innerHTML =
+            document.getElementById("q1-1").innerHTML *
+            document.getElementById("q2-1").innerHTML;
+
+        //q3 variable
+        document.getElementById("q1-2").innerHTML = Math.floor(
+            Math.random() * 10
+        );
+        document.getElementById("q2-2").innerHTML = Math.floor(
+            Math.random() * 10
+        );
+        document.getElementById("ans-2").innerHTML =
+            document.getElementById("q1-2").innerHTML *
+            document.getElementById("q2-2").innerHTML;
+    </script>
+</body>
+
+</html>
